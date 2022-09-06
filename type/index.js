@@ -1,0 +1,9 @@
+export const SELECCIONAR_DOC = 'SELECCIONAR_DOC'
+
+export const INGRESAR_DOC = 'INGRESAR_DOC'
+
+export const AGREGAR_PRODUCTOS = 'AGREGAR_PRODUCTOS'
+
+export const RESUMEN = 'RESUMEN'
+
+export const LIMPIAR = "LIMPIAR"

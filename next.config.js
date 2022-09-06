@@ -1,7 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
-
-module.exports = nextConfig
+module.exports = {
+  env: {
+    MONGODB_URI: "mongodb+srv://quiroz:quiroz@cluster0.eznaeuu.mongodb.net/dbfacturanext",
+    backendURL: "https://facturacion.apisperu.com/api/v1",
+    TOKEN: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTQ2NDAyNDAsImV4cCI6NDgwODI0MDI0MCwidXNlcm5hbWUiOiJqb25hdGhhbiIsImNvbXBhbnkiOiIyMDg1NDI1MzMwMyJ9.srm4UTKbW8JSOFrNaL34i8kUOHP_zxhKGyLv6c4Loo5EXL5Y8V7e6yOWSnRWTL1U2riBnxvRV37xbORFJe-8h8e6EAGVy8y24cRWn4J9eETU0U12zJrNDTbyivW14hYDi-eew5lvvq8QBY4BGoJ14HouuiGIDTNHWWcF5Qwu3Tw0Q_syCvf7WvbVxSsg9hW5fwo4L4ATteRzScStMsfjD3NH1H76FemgwCdYBNFFOWOt28nzpPEeTeE1LmqaVnZvmhY3bUM_-uLCOYO2oBcCNEqzNNQM66OQI6MxQxcKrPlBgT36p3kkl-kNpqy_treXthvtMoBdMmpWEJuUqK9GuU7JAVzUY8MBUriDW1OxXl9pavHgVy-K5H8WY8ht4zGLl3i3StAR7IyGDnDZIGG-gBq4-9jTdAcf-7ddNZU3DrP5ROLOqKB332Hrl0xcNEs5YvXr1IPdPUcLdJL76HwYQD0eS5Fguq471Phh6B46JKs2n1iNC9m2s54wTuPYYFjijjNcJBD2_-_c0liqTYPlXkTSHXtCkw_liKDu7Vor75BpEq4QWazYHepxMwO8ORcGeGLG8-A4S6sHQwD6M7WSctvpxdEi6WIj4ozanPrdG83Ii_5z6evJHXWfqGuxacskQFNhohrVCTqcjt91pbUDQ2nodwKnvc-Lr4F1pvnRw6Y"
+  },
+};
