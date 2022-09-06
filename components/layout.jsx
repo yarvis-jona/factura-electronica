@@ -8,7 +8,7 @@ const Layout = ({children}) => {
         </header>
             {children}
         <footer>
-            <h5>Derechos Reservados</h5>
+            <h5>Derechos Reservados {new Date().getFullYear()}</h5>
         </footer>
     </div>
   )
