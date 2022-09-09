@@ -1,0 +1,33 @@
+.parent {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+/* ocupar toda la altura de pantalla */
+.altura {
+    height: 100vh;
+}
+ 
+.parent header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.parent footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Haciendo scroll */
+.desborde {
+    overflow-y: scroll;
+}

@@ -1,15 +1,29 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import style from '../styles/Layout.module.css'
 
 const Layout = ({children}) => {
   return (
-    <div>
-        <header>
-            <h3>Logo</h3>
-            <h3>Factura Electronica</h3>
-        </header>
-            {children}
-        <footer>
-            <h5>Derechos Reservados {new Date().getFullYear()}</h5>
-        </footer>
+    <div className={style.altura}>
+      <div className={style.parent}>
+          <header className="fondo-header">
+            <Link href='/'>
+              <Image
+                src="/logo.png"
+                alt="Logo de la empresa"
+                width={80}
+                height={80}
+              />
+            </Link>
+            <p className='fuente fuente-familia-titulo fuente-xl fuente-bold fuente-secundary'>FACTURACIÓN ELECTRONICA</p>
+          </header>
+          <main className={`fondo-main ${style.desborde}`}>
+              {children}
+          </main>
+          <footer className="fondo-footer">
+              <h5 className='fuente fuente-familia-contenido fuente-secundary'>@Derechos Reservados {new Date().getFullYear()}</h5>
+          </footer>
+      </div>
     </div>
   )
 }

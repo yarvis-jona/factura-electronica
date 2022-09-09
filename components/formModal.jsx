@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import styles from '../styles/FormModal.module.css'
 
 const FormModal = ({setModal, setProducto}) => {
 
@@ -10,8 +11,8 @@ const FormModal = ({setModal, setProducto}) => {
     }
 
   return (
-    <div>
-        <form onSubmit={handleSubmit(onSubmit)}>
+    <div className='fuente fuente-primary fuente-familia-contenido fuente-l'>
+        <form className={styles.forma} onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <input 
                     type="number" 
@@ -21,9 +22,10 @@ const FormModal = ({setModal, setProducto}) => {
             </div>
             <div>
                 <textarea 
+                    className={styles.textoarea}
                     name="desc" 
                     cols="30" 
-                    rows="10" 
+                    rows="5" 
                     placeholder="Descripción"
                     {...register('descripcion')}
                 ></textarea>

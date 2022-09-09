@@ -1,9 +1,15 @@
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
+  background-color: red;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: 1rem;
+  margin-block: 0;
 }
 
 a {
@@ -24,3 +30,171 @@ a {
     background: black;
   }
 }
+
+/* Fondos */
+.fondo-header {
+  background-color: #283593;
+  background-color: -moz-linear-gradient(left, #283593 0%, #6A1B9A 100%);
+  background-color: -webkit-linear-gradient(left, #283593 0%, #6A1B9A 100%);
+  background-color: linear-gradient(to right, #283593 0%, #6A1B9A 100%);
+}
+
+.fondo-main {
+  background-color: #EEEEEE;
+}
+
+.fondo-footer {
+  background-color: #212121;
+}
+
+/* Botones */
+.custom-btn {
+  width: 25%;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-1 {
+  background-color: rgb(6,14,131);
+  background-color: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+  border: none;
+}
+.btn-1:hover {
+  background-color: rgb(0,3,255);
+  background-color: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+}
+
+/* centrar elementos */
+.centro {
+  text-align: center;
+}
+.centrar-elemento {
+  margin: 0 auto;
+}
+/* margenes */
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.py-1 {
+  padding-block: 1rem;
+}
+
+.p-xy {
+  padding: 1rem;
+}
+
+/* contenedor dividido */
+.contenedor-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* elemento index centrado */
+.contenedor-centro {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-centro form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+/* configuracion de letras */
+.fuente {
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+.fuente-familia-titulo {
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.fuente-familia-contenido {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.fuente-2xl {
+  font-size: 2rem;
+}
+
+.fuente-xl {
+  font-size: 1.5rem;
+}
+
+.fuente-l {
+  font-size: 1rem;
+}
+
+.fuente-primary {
+  color: #2B2B2B;
+}
+
+.fuente-secundary {
+  color: #EEEEEE;
+}
+
+.fuente-info-1 {
+  color: red;
+}
+
+.fuente-info-2 {
+  color: #1A237E;
+}
+
+.fuente-bold {
+  font-weight: bold;
+}
+
+/* bordes */
+/* border factura o boleta */
+.borde-1 {
+  border: 4px solid #1A237E;
+  border-radius: 10px 10px 10px 10px;
+}
+.border-botton {
+  -webkit-box-shadow: 0px 9px 14px -5px rgba(0,0,0,0.42); 
+  box-shadow: 0px 9px 14px -5px rgba(0,0,0,0.42);
+}
+
+/* Botones de confirmacion y cancelar */
+.confirmar {
+  background-color: #76FF03;
+}
+.confirmar:hover{
+  background-color: #64DD17;
+}
+
+.cancelar {
+  background-color: #FF1744;
+}
+.cancelar:hover{
+  background-color: #D50000;
+}
+
+/* imagen adaptable */
+.imagen-fluid {
+  height: auto;
+  max-width: 100%;
+}
+
+

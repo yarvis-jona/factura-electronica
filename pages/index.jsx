@@ -26,9 +26,11 @@ export default function Home() {
 
   return (
     <Layout>
-      <h1>Crear una Factura o Boleta</h1>
-      <button onClick={ () => handlerDoc({tipoDoc: "01", serie: "F001"})} >Factura</button>
-      <button onClick={ () => handlerDoc({tipoDoc: "03", serie: "B001"}) }>Boleta</button>
+      <div className="contenedor-centro">
+        <h1 className="fuente fuente-familia-titulo fuente-xl fuente-primary">¿Cliente desea?</h1>
+        <button className="custom-btn btn-1 fuente fuente-familia-contenido fuente-xl" onClick={ () => handlerDoc({tipoDoc: "01", serie: "F001"})} >Factura</button>
+        <button className="custom-btn btn-1 fuente fuente-familia-contenido fuente-xl" onClick={ () => handlerDoc({tipoDoc: "03", serie: "B001"}) }>Boleta</button>
+      </div>
     </Layout>
   )
 }

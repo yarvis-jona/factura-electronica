@@ -65,11 +65,11 @@ const ConfirmarEmision = ({setModal2}) => {
     }
 
   return (
-    <div>
+    <div className='fuente fuente-familia-contenido fuente-xl fuente-bold'>
         <p>¿Estas seguro de emitir el documento?</p>
-        <div>
-            <button onClick={ () => cancelarFacBol() }>Cancelar</button>
-            <button onClick={ () => confirmarFacBol() }>Confirmar</button>
+        <div className='contenedor-div mt-1'>
+            <button className='cancelar p-xy' onClick={ () => cancelarFacBol() }>Cancelar</button>
+            <button className='confirmar p-xy' onClick={ () => confirmarFacBol() }>Confirmar</button>
         </div>
     </div>
   )

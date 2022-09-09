@@ -14,7 +14,23 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    color: 'black'
+    color: 'black',
+    backgroundColor: '#757575',
+    boxShadow: '0px 9px 14px -5px rgba(0,0,0,0.42)'
+  },
+};
+
+const customStyles2 = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    color: 'black',
+    backgroundColor: '#FFEE58',
+    boxShadow: '0px 9px 14px -5px rgba(0,0,0,0.42)'
   },
 };
 
@@ -23,7 +39,7 @@ Modal.setAppElement('#__next');
 const Documento = () => {
 
   const AppContext = useContext(appContext)
-  const { company, client, agregarProducto } = AppContext
+  const { tipoDoc, company, client, agregarProducto } = AppContext
 
   
 
@@ -45,27 +61,33 @@ const Documento = () => {
 
   return (
     <Layout>
-        <hr />
         <div>
-          <h3>Datos de la Empresa</h3>
-          <p>{company.razonSocial}</p>
-          <p>{company.ruc}</p>
-          <p>{company.address.direccion}</p>
+          <h3 className='centro p-xy fuente fuente-familia-titulo fuente-xl fuente-primary border-botton'>Datos de la Empresa</h3>
+          <div className='contenedor-div mt-1'>
+            <div>
+              <p className='fuente fuente-familia-contenido fuente-xl fuente-bold'>{company.razonSocial}</p>
+              <p className='fuente fuente-familia-contenido fuente-l'>{company.address.direccion}</p>
+            </div>
+            <div className='centro borde-1 p-xy'>
+              <p className='fuente fuente-familia-contenido fuente-xl fuente-bold'>{ tipoDoc === "01" ? "Factura Electronica" : "Boleta de venta"}</p>
+              <p className='fuente fuente-familia-titulo fuente-xl'>RUC</p>
+              <p className='fuente fuente-familia-contenido fuente-xl'>{company.ruc}</p>
+            </div>
+          </div>
+          
         </div>
-        <hr />
         <div>
-          <h3>Datos del cliente</h3>
-          <p>{client.rznSocial}</p>
-          <p>{client.numDoc}</p>
+          <h3 className='border-botton centro mt-1 p-xy fuente fuente-familia-titulo fuente-xl fuente-primary'>Datos del cliente</h3>
+          <div className='centro p-xy mt-1'>
+            <p className='fuente fuente-familia-contenido fuente-xl fuente-info-1 fuente-bold'>{client.rznSocial}</p>
+            <p className='fuente fuente-familia-contenido fuente-xl fuente-bold mt-1'>{client.numDoc}</p>
+          </div>
         </div>
-        <hr />
-
-        <button onClick={ () => setModal(true) }>Agregar Producto</button>
-
-        <hr />
-
+        <div className='centro p-xy border-botton'>
+          <button className='custom-btn btn-1 fuente fuente-familia-titulo fuente-l fuente-secundary' onClick={ () => setModal(true) }>Agregar Producto</button>
+        </div>
+        
         <Tabla setModal2={setModal2}/>
-
 
         {modal && (
           <Modal
@@ -79,7 +101,7 @@ const Documento = () => {
         {modal2 && (
           <Modal
             isOpen={modal2}
-            style={customStyles}
+            style={customStyles2}
           >
             <ConfirmarEmision setModal2={setModal2} />
           </Modal>

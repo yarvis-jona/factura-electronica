@@ -19,15 +19,17 @@ const Contacto = () => {
 
   return (
     <Layout>
-      <h3>Ingresar datos</h3>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input 
-          type='text' 
-          placeholder='Ingresa ruc o dni' 
-          {...register('documento')}
-        />
-        <button type='submit' onClick={ () => router.push('/documento')}>Enviar</button>
-      </form>
+      <div className='contenedor-centro'>
+        <h3 className='fuente fuente-familia-titulo fuente-xl'>Ingresar datos</h3>
+        <form className='mt-1' onSubmit={handleSubmit(onSubmit)}>
+          <input className='p-xy fuente fuente-familia-contenido fuente-xl fuente-bold fuente-primary'
+            type='text' 
+            placeholder='Ingresa ruc o dni' 
+            {...register('documento')}
+          />
+          <button className='mt-1 custom-btn btn-1 fuente fuente-familia-titulo fuente-secundary fuente bold fuente-l' type='submit' onClick={ () => router.push('/documento')}>Enviar</button>
+        </form>
+      </div>
     </Layout>
   )
 }

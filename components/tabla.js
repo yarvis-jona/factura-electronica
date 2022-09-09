@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import appContext from '../context/appContext'
 
+import styles from '../styles/Tabla.module.css'
+
 const Tabla = ({setModal2}) => {
 
     const AppContext = useContext(appContext)
@@ -22,14 +24,14 @@ const Tabla = ({setModal2}) => {
     }
 
   return (
-    <div>
-        <table>
-            <thead>
+    <div className='mt-1'>
+        <table className={`centrar-elemento fuente fuente-familia-contenido ${styles.paleBlueRows}`}>
+            <thead className='fuente-l fuente-bold'>
                 <tr>
                     <th>Cantidad</th>
                     <th>Descripción</th>
-                    <th>(S/.) Valor Unitario</th>
-                    <th>(S/.) Valor Total</th>
+                    <th>S/. V. Unit.</th>
+                    <th>S/. V. Total</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,12 +60,14 @@ const Tabla = ({setModal2}) => {
                 
             </tfoot>
         </table>
-        <hr />
-        <button 
-            onClick={ () => datosFinales() }
-        >
-            Emitir
-        </button>
+        <div className='centro p-xy'>
+            <button 
+                className='custom-btn btn-1 fuente fuente-familia-titulo fuente-l fuente-secundary'
+                onClick={ () => datosFinales() }
+            >
+                Emitir
+            </button>
+        </div>
     </div>
   )
 }
