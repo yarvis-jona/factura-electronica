@@ -23,6 +23,7 @@ const Layout = ({children}) => {
               {children}
           </main>
           <footer className="fondo-footer">
+              <h5 className='fuente fuente-familia-contenido fuente-secundary fuente-bold'>Ing. Jonathan German Quispe Quiroz</h5>
               <h5 className='fuente fuente-familia-contenido fuente-secundary'>@Derechos Reservados {new Date().getFullYear()}</h5>
           </footer>
       </div>
