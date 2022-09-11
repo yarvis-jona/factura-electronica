@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 const ConfirmarEmision = ({setModal2}) => {
 
     const AppContext = useContext(appcontext)
-    const { state, tipoDoc, correlativo, resetearState } = AppContext
+    const { state, tipoDoc, correlativo, resetearState, cancelarLeyenda } = AppContext
 
     const router = useRouter()
 
@@ -62,6 +62,7 @@ const ConfirmarEmision = ({setModal2}) => {
 
     const cancelarFacBol = () => {
         setModal2(false)
+        cancelarLeyenda()
     }
 
   return (

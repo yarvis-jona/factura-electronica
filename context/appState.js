@@ -10,7 +10,8 @@ import {
   INGRESAR_DOC,
   AGREGAR_PRODUCTOS,
   RESUMEN,
-  LIMPIAR
+  LIMPIAR,
+  CANCELAR_LEYENDA
 } from '../type'
 
 /* Definir state inicial */
@@ -161,6 +162,16 @@ const AppState = ({children}) => {
     }
   }
 
+  const cancelarLeyenda = () => {
+    try {
+      dispatch({
+        type: CANCELAR_LEYENDA
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <appContext.Provider
         value={{
@@ -174,7 +185,8 @@ const AppState = ({children}) => {
           consultarCliente,
           agregarProducto,
           agregarResumen,
-          resetearState
+          resetearState,
+          cancelarLeyenda
         }}
     >
         {children}

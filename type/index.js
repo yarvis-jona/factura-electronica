@@ -7,3 +7,5 @@ export const AGREGAR_PRODUCTOS = 'AGREGAR_PRODUCTOS'
 export const RESUMEN = 'RESUMEN'
 
 export const LIMPIAR = "LIMPIAR"
+
+export const CANCELAR_LEYENDA = "CANCELAR_LEYENDA"

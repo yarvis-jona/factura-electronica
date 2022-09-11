@@ -5,7 +5,8 @@ import {
     INGRESAR_DOC,
     AGREGAR_PRODUCTOS,
     RESUMEN,
-    LIMPIAR
+    LIMPIAR,
+    CANCELAR_LEYENDA
 } from '../type'
 
 const appReducer = (state, action) => {
@@ -54,6 +55,11 @@ const appReducer = (state, action) => {
                 subTotal: null,
                 mtoImpVenta: null,
                 details: [],
+                legends: []
+            }
+        case CANCELAR_LEYENDA:
+            return {
+                ...state,
                 legends: []
             }
         default:

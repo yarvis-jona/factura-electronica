@@ -7,14 +7,16 @@ const Layout = ({children}) => {
     <div className={style.altura}>
       <div className={style.parent}>
           <header className="fondo-header">
-            <Link href='/'>
-              <Image
-                src="/logo.png"
-                alt="Logo de la empresa"
-                width={80}
-                height={80}
-              />
-            </Link>
+              <Link href='/'>
+                <a>
+                  <Image
+                    src="/logo.png"
+                    alt="Logo de la empresa"
+                    width={80}
+                    height={80}
+                  />
+                </a>
+              </Link>
             <p className='fuente fuente-familia-titulo fuente-xl fuente-bold fuente-secundary'>FACTURACIÓN ELECTRONICA</p>
           </header>
           <main className={`fondo-main ${style.desborde}`}>
