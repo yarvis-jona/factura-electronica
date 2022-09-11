@@ -29,14 +29,14 @@ const INITIAL_STATE = {
     tipoMoneda: "PEN",
     client: {},
     company: {
-      ruc: 20854253303,
-      razonSocial: "Comercial Quiroz",
-      nombreComercial: "Comercial Quiroz",
+      ruc: 20392685660,
+      razonSocial: "P & C QUIROZ E.I.R.L.",
+      nombreComercial: "P & C QUIROZ E.I.R.L.",
       address: {
-        direccion: "Jr. huallaga 434.",
-        provincia: "Lima",
-        departamento: "Lima",
-        distrito: "Lima",
+        direccion: "JR. HULLAGA NRO. 656 INT. 730",
+        provincia: "LIMA",
+        departamento: "LIMA",
+        distrito: "LIMA",
         ubigeo: "150101"
       }
     },
