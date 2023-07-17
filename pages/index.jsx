@@ -21,6 +21,7 @@ export default function Home() {
     const docs =  tipoDoc === "01" ? {tipoDoc: "01", serie: "F001", correlativo: count_factura + 1 } : {tipoDoc: "03", serie: "B001", correlativo: count_boleta +1}
     
     ingresarFacBol(docs)
+    // nos dirigimos a contacto
     router.push('/contacto')
   }
 
