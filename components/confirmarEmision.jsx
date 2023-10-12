@@ -43,9 +43,15 @@ const ConfirmarEmision = ({setModal2}) => {
                 const archivo = await clienteAxios.post('/invoice/pdf', state, {responseType: 'blob', headers:{'Accept': 'application/pdf'}})
                 const blob = new Blob([archivo.data])
                 const url = window.URL.createObjectURL(blob)
+
+                /* Configuracio para obetener el xml */
+                const archivoXml = await clienteAxios.post('/invoice/xml', state, {responseType: 'blob', headers:{'Accept': 'application/xml'}})
+                const blobXml = new Blob([archivoXml.data])
+                const urlXml = window.URL.createObjectURL(blobXml)
                 
                 /* mostrar el pdf */
                 window.open(url)
+                window.open(urlXml)
 
                 /* Modificar la base de datos */
                 actualizarCorrelativo()
